@@ -10,30 +10,42 @@ import com.xu.Config;
  */
 
 public class LogUtil {
-    public static final String TAG = "";
+    public static final String TAG = "xzx";
 
     public static void v(String msg) {
-        v(TAG, msg);
+        if (Config.debug) {
+            Log.v(TAG, getCodeLocation() + msg);
+        }
     }
 
     public static void d(String msg) {
-        d(TAG, msg);
+        if (Config.debug) {
+            Log.d(TAG, getCodeLocation() + msg);
+        }
     }
 
     public static void i(String msg) {
-        i(TAG, msg);
+        if (Config.debug) {
+            Log.i(TAG, getCodeLocation() + msg);
+        }
     }
 
     public static void w(String msg) {
-        w(TAG, msg);
+        if (Config.debug) {
+            Log.w(TAG, getCodeLocation() + msg);
+        }
     }
 
     public static void e(String msg) {
-        e(TAG, msg);
+        if (Config.debug) {
+            Log.e(TAG, getCodeLocation() + msg);
+        }
     }
 
     public static void wtf(String msg) {
-        wtf(TAG, msg);
+        if (Config.debug) {
+            Log.wtf(TAG, getCodeLocation() + msg);
+        }
     }
 
     public static void v(String tag, String msg) {
