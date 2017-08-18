@@ -1,9 +1,11 @@
 package com.xu.myapp.image;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ImageActivity extends AppCompatActivity {
+import com.xu.myapp.BaseActivity;
+import com.xu.myapp.R;
+
+public class ImageActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

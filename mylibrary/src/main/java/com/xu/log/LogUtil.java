@@ -10,78 +10,82 @@ import com.xu.Config;
  */
 
 public class LogUtil {
-    public static final String TAG = "xzx";
+    private static final String TAG = "xzx";
 
     public static void v(String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.v(TAG, getCodeLocation() + msg);
         }
     }
 
     public static void d(String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.d(TAG, getCodeLocation() + msg);
         }
     }
 
     public static void i(String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.i(TAG, getCodeLocation() + msg);
         }
     }
 
     public static void w(String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.w(TAG, getCodeLocation() + msg);
         }
     }
 
     public static void e(String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.e(TAG, getCodeLocation() + msg);
         }
     }
 
     public static void wtf(String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.wtf(TAG, getCodeLocation() + msg);
         }
     }
 
     public static void v(String tag, String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.v(tag, getCodeLocation() + msg);
         }
     }
 
     public static void d(String tag, String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.d(tag, getCodeLocation() + msg);
         }
     }
 
     public static void i(String tag, String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.i(tag, getCodeLocation() + msg);
         }
     }
 
     public static void w(String tag, String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.w(tag, getCodeLocation() + msg);
         }
     }
 
     public static void e(String tag, String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.e(tag, getCodeLocation() + msg);
         }
     }
 
     public static void wtf(String tag, String msg) {
-        if (Config.debug) {
+        if (isDebug()) {
             Log.wtf(tag, getCodeLocation() + msg);
         }
+    }
+
+    private static boolean isDebug(){
+        return Config.getInstance().isDebug();
     }
 
     private static String getCodeLocation() {
